@@ -39,7 +39,7 @@ def build_dataset(is_train, args):
         root = args.data_path if is_train else args.eval_data_path
         dataset = datasets.ImageFolder(root, transform=transform)
         nb_classes = 4
-        class_to_idx) = {'cover': 0, 'jmipod': 1, 'juniward': 2, 'uerd': 3}
+        class_to_idx = {'cover': 0, 'jmipod': 1, 'juniward': 2, 'uerd': 3}
         assert len(class_to_idx) == nb_classes
     else:
         raise NotImplementedError()
